@@ -5,7 +5,12 @@ import joblib
 import streamlit as st
 
 
-pipeline = joblib.load("model_xgb.pkl")
+import os
+
+
+model_path = os.path.join(os.path.dirname(__file__), "model_xgb.pkl")
+pipeline = joblib.load(model_path)
+
 
 
 st.title("Welcome 😊")
